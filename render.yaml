@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: loyalty-swift-rates
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: TELEGRAM_CHANNEL
+        value: LoyaltySwift
+      - key: UPDATE_INTERVAL_MS
+        value: 300000
